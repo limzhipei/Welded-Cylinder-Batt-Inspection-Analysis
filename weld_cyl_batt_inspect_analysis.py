@@ -76,13 +76,17 @@ else:
           st.write('This is cam 1 positive dataframe')
           st.dataframe(cam1_df_positive)
           
+          #Scatter Plot Selection
+          cam1_neg_col = cam1_df_negative.columns.values.tolist()
+          option1 = st.selectbox('Choose Y Axis', cam1_neg_col)
+          
           #Scatter Plots Negative
           st.write('This is cam 1 negative scatter plots')
           x = cam1_df_negative['Battery No.'].tolist()
           
           #T151: Pattern Match
-          st.write('T151: Pattern Match')
-          y1 = cam1_df_negative.iloc[:, [4]]
+          st.write(option1)
+          y1 = cam1_df_negative.loc[option1]
           
           fig1 = plt.figure()
           plt.scatter(x, y1, c ="blue")
@@ -95,6 +99,14 @@ else:
           fig2 = plt.figure()
           plt.scatter(x, y2, c ="blue")
           st.write(fig2)
+          
+          #T157: Uki 1
+          st.write('T157: Uki 1')
+          y3 = cam1_df_negative.iloc[:, [8]]
+          
+          fig3 = plt.figure()
+          plt.scatter(x, y3, c ="blue")
+          st.write(fig3)
           
           #Scatter Plots Positive
           st.write('This is cam 1 positive scatter plots')
