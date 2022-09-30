@@ -8,7 +8,7 @@ import streamlit as st
 
 st.set_page_config(
      page_title="Welded Cylinder Battery Inspection Analysis Tool",
-     page_icon=":fire:",
+     page_icon=":magnifying glass:",
      layout="centered",
      initial_sidebar_state="expanded",
      menu_items={
