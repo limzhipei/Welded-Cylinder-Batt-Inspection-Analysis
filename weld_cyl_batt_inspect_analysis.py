@@ -3,6 +3,7 @@ import math
 import pandas as pd
 import numpy as np
 import streamlit as st
+import matplotlib.pyplot as plt
 
 st.set_page_config(
      page_title="Welded Cylinder Battery Inspection Analysis Tool",
@@ -74,6 +75,19 @@ else:
           
           st.write('This is cam 1 positive dataframe')
           st.dataframe(cam1_df_positive)
+          
+          #Scatter Plots
+          st.write('This is cam 1 negative scatter plots')
+          x = cam1_df_negative['Battery No.'].tolist()
+          
+          #T151: Pattern Match
+          y1 = cam1_df_negative.iloc[:, [4]].tolist()
+          plt.scatter(x, y1, c ="blue")
+          
+          st.write('This is cam 1 positive scatter plots')
+          
+          # To show the plot
+          plt.show()
 
      elif cam2_selected == True:
           #Import Cam 2 Data
