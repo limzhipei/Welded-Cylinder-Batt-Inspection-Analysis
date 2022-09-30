@@ -83,17 +83,13 @@ else:
           
           #Scatter Plots Negative
           st.write('This is cam 1 negative scatter plots')
-          x1 = cam1_df_negative['Battery No.'].tolist()
+          x1 = cam1_df_negative['Battery No.']
           
           #Display Plot
           st.write(option1)
-          y1 = cam1_df_negative.loc[:, [option1]]
+          y1 = cam1_df_negative[option1]
           
-          fig1 = plt.figure()
-          plt.scatter(x1, y1, c ="blue")
-          st.write(fig1)
-          
-          plot = px.scatter(cam1_df_negative, x=cam1_df_negative['Battery No.'], y=cam1_df_negative[option1])
+          plot = px.scatter(cam1_df_negative, x=x1, y=y1)
           st.plotly_chart(plot, use_container_width=True)
           
           #Scatter Plot Selection Positive
@@ -102,15 +98,14 @@ else:
           
           #Scatter Plots Positive
           st.write('This is cam 1 positive scatter plots')
-          x2 = cam1_df_positive['Battery No.'].tolist()
+          x2 = cam1_df_positive['Battery No.']
           
           #Display Plot
           st.write(option2)
-          y2 = cam1_df_positive.loc[:, [option2]]
+          y2 = cam1_df_positive[option2]
           
-          fig2 = plt.figure()
-          plt.scatter(x2, y2, c ="green")
-          st.write(fig2)
+          plot = px.scatter(cam1_df_positive, x=x2, y=y2)
+          st.plotly_chart(plot, use_container_width=True)
           
      elif cam2_selected == True:
           #Import Cam 2 Data
@@ -143,15 +138,14 @@ else:
           
           #Scatter Plots Negative
           st.write('This is cam 2 negative scatter plots')
-          x3 = cam2_df_negative['Battery No.'].tolist()
+          x3 = cam2_df_negative['Battery No.']
           
           #Display Plot
           st.write(option3)
-          y3 = cam2_df_negative.loc[:, [option3]]
+          y3 = cam2_df_negative[option3]
           
-          fig3 = plt.figure()
-          plt.scatter(x3, y3, c ="blue")
-          st.write(fig3)
+          plot = px.scatter(cam2_df_negative, x=x3, y=y3)
+          st.plotly_chart(plot, use_container_width=True)
           
           #Scatter Plot Selection Positive
           cam2_pos_col = cam2_df_positive.columns.values.tolist()[1:-1]
@@ -159,15 +153,14 @@ else:
           
           #Scatter Plots Positive
           st.write('This is cam 2 positive scatter plots')
-          x4 = cam2_df_positive['Battery No.'].tolist()
+          x4 = cam2_df_positive['Battery No.']
           
           #Display Plot
           st.write(option4)
-          y4 = cam2_df_positive.loc[:, [option4]]
+          y4 = cam2_df_positive[option4]
           
-          fig4 = plt.figure()
-          plt.scatter(x4, y4, c ="green")
-          st.write(fig4)
+          plot = px.scatter(cam2_df_positive, x=x4, y=y4)
+          st.plotly_chart(plot, use_container_width=True)
 
 
 
