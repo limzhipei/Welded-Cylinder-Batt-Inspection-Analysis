@@ -93,6 +93,9 @@ else:
           plt.scatter(x1, y1, c ="blue")
           st.write(fig1)
           
+          plot = px.scatter(x=x1, y=y1)
+          st.plotly_chart(plot, use_container_width=True)
+          
           #Scatter Plot Selection Positive
           cam1_pos_col = cam1_df_positive.columns.values.tolist()[1:-1]
           option2 = st.selectbox('Choose Y Axis', cam1_pos_col)
