@@ -76,17 +76,27 @@ else:
           st.write('This is cam 1 positive dataframe')
           st.dataframe(cam1_df_positive)
           
-          #Scatter Plots
+          #Scatter Plots Negative
           st.write('This is cam 1 negative scatter plots')
           x = cam1_df_negative['Battery No.'].tolist()
           
           #T151: Pattern Match
+          st.write('T151: Pattern Match')
           y1 = cam1_df_negative.iloc[:, [4]]
           
           fig1 = plt.figure()
           plt.scatter(x, y1, c ="blue")
           st.write(fig1)
           
+          #T152: Find Weld
+          st.write('T152: Find Weld')
+          y2 = cam1_df_negative.iloc[:, [6]]
+          
+          fig2 = plt.figure()
+          plt.scatter(x, y2, c ="blue")
+          st.write(fig2)
+          
+          #Scatter Plots Positive
           st.write('This is cam 1 positive scatter plots')
           
 
