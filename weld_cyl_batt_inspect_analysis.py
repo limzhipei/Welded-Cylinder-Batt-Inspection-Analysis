@@ -81,7 +81,7 @@ else:
           x = cam1_df_negative['Battery No.'].tolist()
           
           #T151: Pattern Match
-          y1 = cam1_df_negative.iloc[:, [4]].tolist()
+          y1 = cam1_df_negative.iloc[:, [4]]
           
           fig1 = plt.figure()
           ax = fig.add_subplot(1,1,1)
