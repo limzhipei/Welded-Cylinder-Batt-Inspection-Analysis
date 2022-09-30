@@ -110,7 +110,7 @@ else:
           
      elif cam2_selected == True:
           #Import Cam 2 Data
-          cam2_df = pd.read_csv("C:/Users/70N5593/Desktop/20220924 Welded Cylinder Battery Excel Data/Raw data/220924_NG_Cam2.csv")
+          cam2_df = df
 
           #Cam 2 Data Sorting & Pre-processing
           cam2_df = cam2_df.sort_index(axis=1, ascending=True)
