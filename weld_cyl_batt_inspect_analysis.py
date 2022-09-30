@@ -86,7 +86,7 @@ else:
           
           #T151: Pattern Match
           st.write(option1)
-          y1 = cam1_df_negative.loc[option1]
+          y1 = cam1_df_negative.loc[:, [option1]]
           
           fig1 = plt.figure()
           plt.scatter(x, y1, c ="blue")
