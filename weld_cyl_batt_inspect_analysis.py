@@ -50,7 +50,7 @@ if (samples == 0 or selector is None or uploaded_file is None):
      st.header('Please input number of samples, select camera and upload a file to start!')
 
 else:
-     while cam1_selected == True:
+     if cam1_selected == True:
           #Import Cam 1 Data
           cam1_df = df
 
@@ -75,7 +75,7 @@ else:
           st.write('This is cam 1 positive dataframe')
           st.dataframe(cam1_df_positive)
 
-     while cam2_selected == True:
+     elif cam2_selected == True:
           #Import Cam 2 Data
           cam2_df = pd.read_csv("C:/Users/70N5593/Desktop/20220924 Welded Cylinder Battery Excel Data/Raw data/220924_NG_Cam2.csv")
 
