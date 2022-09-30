@@ -26,7 +26,7 @@ cam1_selected = False
 cam2_selected = False
 
 with st.sidebar:
-     samples = round_down(st.number_input('Insert number of samples'))
+     samples = int(st.number_input('Insert number of samples'))
      st.write('The current number of samples is ', samples)
      selector = st.radio('Which Camera?:', ["Cam 1", "Cam 2"])
      if selector == "Cam 1":
