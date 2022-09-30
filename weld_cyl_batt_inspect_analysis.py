@@ -76,42 +76,38 @@ else:
           st.write('This is cam 1 positive dataframe')
           st.dataframe(cam1_df_positive)
           
-          #Scatter Plot Selection
-          cam1_neg_col = cam1_df_negative.columns.values.tolist()
+          #Scatter Plot Selection Negative
+          cam1_neg_col = cam1_df_negative.columns.values.tolist()[1:-1]
           option1 = st.selectbox('Choose Y Axis', cam1_neg_col)
           
           #Scatter Plots Negative
           st.write('This is cam 1 negative scatter plots')
-          x = cam1_df_negative['Battery No.'].tolist()
+          x1 = cam1_df_negative['Battery No.'].tolist()
           
-          #T151: Pattern Match
+          #Display Plot
           st.write(option1)
           y1 = cam1_df_negative.loc[:, [option1]]
           
           fig1 = plt.figure()
-          plt.scatter(x, y1, c ="blue")
+          plt.scatter(x1, y1, c ="blue")
           st.write(fig1)
           
-          #T152: Find Weld
-          st.write('T152: Find Weld')
-          y2 = cam1_df_negative.iloc[:, [6]]
-          
-          fig2 = plt.figure()
-          plt.scatter(x, y2, c ="blue")
-          st.write(fig2)
-          
-          #T157: Uki 1
-          st.write('T157: Uki 1')
-          y3 = cam1_df_negative.iloc[:, [8]]
-          
-          fig3 = plt.figure()
-          plt.scatter(x, y3, c ="blue")
-          st.write(fig3)
+          #Scatter Plot Selection Positive
+          cam1_pos_col = cam1_df_positive.columns.values.tolist()[1:-1]
+          option2 = st.selectbox('Choose Y Axis', cam1_pos_col)
           
           #Scatter Plots Positive
           st.write('This is cam 1 positive scatter plots')
+          x2 = cam1_df_positive['Battery No.'].tolist()
           
-
+          #Display Plot
+          st.write(option2)
+          y2 = cam1_df_positive.loc[:, [option2]]
+          
+          fig2 = plt.figure()
+          plt.scatter(x2, y2, c ="green")
+          st.write(fig2)
+          
      elif cam2_selected == True:
           #Import Cam 2 Data
           cam2_df = pd.read_csv("C:/Users/70N5593/Desktop/20220924 Welded Cylinder Battery Excel Data/Raw data/220924_NG_Cam2.csv")
@@ -132,12 +128,42 @@ else:
           cam2_df_positive['Battery No.'] = np.resize(samples_array, cam2_df_positive.shape[0])
 
           st.write('This is cam 2 negative dataframe')
-          st.dataframe(cam1_df_negative)
+          st.dataframe(cam2_df_negative)
           
           st.write('This is cam 2 positive dataframe')
-          st.dataframe(cam1_df_positive)
+          st.dataframe(cam2_df_positive)
 
-
+          #Scatter Plot Selection Negative
+          cam2_neg_col = cam2_df_negative.columns.values.tolist()[1:-1]
+          option3 = st.selectbox('Choose Y Axis', cam2_neg_col)
+          
+          #Scatter Plots Negative
+          st.write('This is cam 2 negative scatter plots')
+          x3 = cam2_df_negative['Battery No.'].tolist()
+          
+          #Display Plot
+          st.write(option3)
+          y3 = cam2_df_negative.loc[:, [option3]]
+          
+          fig3 = plt.figure()
+          plt.scatter(x3, y3, c ="blue")
+          st.write(fig3)
+          
+          #Scatter Plot Selection Positive
+          cam2_pos_col = cam2_df_positive.columns.values.tolist()[1:-1]
+          option4 = st.selectbox('Choose Y Axis', cam2_pos_col)
+          
+          #Scatter Plots Positive
+          st.write('This is cam 2 positive scatter plots')
+          x4 = cam2_df_positive['Battery No.'].tolist()
+          
+          #Display Plot
+          st.write(option4)
+          y4 = cam2_df_positive.loc[:, [option4]]
+          
+          fig4 = plt.figure()
+          plt.scatter(x4, y4, c ="green")
+          st.write(fig4)
 
 
 
