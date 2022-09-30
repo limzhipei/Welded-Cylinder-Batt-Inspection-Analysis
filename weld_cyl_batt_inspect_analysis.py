@@ -93,7 +93,7 @@ else:
           plt.scatter(x1, y1, c ="blue")
           st.write(fig1)
           
-          plot = px.scatter(x=x1, y=y1)
+          plot = px.scatter(cam1_df_negative, x=x1, y=y1)
           st.plotly_chart(plot, use_container_width=True)
           
           #Scatter Plot Selection Positive
