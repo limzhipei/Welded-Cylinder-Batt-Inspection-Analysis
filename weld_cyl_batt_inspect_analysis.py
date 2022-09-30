@@ -84,9 +84,8 @@ else:
           y1 = cam1_df_negative.iloc[:, [4]]
           
           fig1 = plt.figure()
-          ax = fig.add_subplot(1,1,1)
           plt.scatter(x, y1, c ="blue")
-          st.write(fig)
+          st.write(fig1)
           
           st.write('This is cam 1 positive scatter plots')
           
