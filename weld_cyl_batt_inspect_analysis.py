@@ -89,7 +89,7 @@ else:
           st.write(option1)
           y1 = cam1_df_negative[option1]
           
-          plot = px.scatter(cam1_df_negative, x=x1, y=y1, color='green')
+          plot = px.scatter(cam1_df_negative, x=x1, y=y1)
           st.plotly_chart(plot, use_container_width=True)
           
           #Scatter Plot Selection Positive
@@ -104,7 +104,7 @@ else:
           st.write(option2)
           y2 = cam1_df_positive[option2]
           
-          plot = px.scatter(cam1_df_positive, x=x2, y=y2, color='green')
+          plot = px.scatter(cam1_df_positive, x=x2, y=y2)
           st.plotly_chart(plot, use_container_width=True)
           
      elif cam2_selected == True:
@@ -144,7 +144,7 @@ else:
           st.write(option3)
           y3 = cam2_df_negative[option3]
           
-          plot = px.scatter(cam2_df_negative, x=x3, y=y3, color='green')
+          plot = px.scatter(cam2_df_negative, x=x3, y=y3)
           st.plotly_chart(plot, use_container_width=True)
           
           #Scatter Plot Selection Positive
@@ -159,7 +159,7 @@ else:
           st.write(option4)
           y4 = cam2_df_positive[option4]
           
-          plot = px.scatter(cam2_df_positive, x=x4, y=y4, color='green')
+          plot = px.scatter(cam2_df_positive, x=x4, y=y4)
           st.plotly_chart(plot, use_container_width=True)
 
 
