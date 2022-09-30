@@ -10,7 +10,7 @@ st.set_page_config(
      page_title="Welded Cylinder Battery Inspection Analysis Tool",
      page_icon=":fire:",
      layout="centered",
-     initial_sidebar_state="collapsed",
+     initial_sidebar_state="expanded",
      menu_items={
          'Get Help': None,
          'Report a bug': None,
