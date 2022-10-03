@@ -94,6 +94,7 @@ else:
           plot1 = px.scatter(cam1_df_negative, x=x1, y=y1)
           plot1.add_hline(y=ul1, line_width=3, line_color="red")
           plot1.add_hline(y=ll1, line_width=3, line_color="red")
+          plot1.add_hrect(y0=ll1, y1=ul1, line_width=0, fillcolor="green", opacity=0.2)
           st.plotly_chart(plot1, use_container_width=True)
           
           #Scatter Plot Selection Positive
@@ -113,6 +114,7 @@ else:
           plot2 = px.scatter(cam1_df_positive, x=x2, y=y2)
           plot2.add_hline(y=ul2, line_width=3, line_color="red")
           plot2.add_hline(y=ll2, line_width=3, line_color="red")
+          plot2.add_hrect(y0=ll2, y1=ul2, line_width=0, fillcolor="green", opacity=0.2)
           st.plotly_chart(plot2, use_container_width=True)
           
      elif cam2_selected == True:
@@ -157,6 +159,7 @@ else:
           plot3 = px.scatter(cam2_df_negative, x=x3, y=y3)
           plot3.add_hline(y=ul3, line_width=3, line_color="red")
           plot3.add_hline(y=ll3, line_width=3, line_color="red")
+          plot3.add_hrect(y0=ll3, y1=ul3, line_width=0, fillcolor="green", opacity=0.2)
           st.plotly_chart(plot3, use_container_width=True)
           
           #Scatter Plot Selection Positive
@@ -176,6 +179,7 @@ else:
           plot4 = px.scatter(cam2_df_positive, x=x4, y=y4)
           plot4.add_hline(y=ul4, line_width=3, line_color="red")
           plot4.add_hline(y=ll4, line_width=3, line_color="red")
+          plot4.add_hrect(y0=ll4, y1=ul4, line_width=0, fillcolor="green", opacity=0.2)
           st.plotly_chart(plot4, use_container_width=True)
 
 
