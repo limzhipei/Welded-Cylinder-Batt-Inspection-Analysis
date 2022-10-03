@@ -80,8 +80,8 @@ else:
           #Scatter Plot Selection Negative
           cam1_neg_col = cam1_df_negative.columns.values.tolist()[1:-1]
           option1 = st.selectbox('Choose Y Axis', cam1_neg_col)
-          ul1 = int(st.number_input('Upper Limit'))
-          ll1 = int(st.number_input('Lower Limit'))
+          ul1 = int(st.number_input('Upper Limit 1'))
+          ll1 = int(st.number_input('Lower Limit 1'))
           
           #Scatter Plots Negative
           st.write('This is cam 1 negative scatter plots')
@@ -99,8 +99,8 @@ else:
           #Scatter Plot Selection Positive
           cam1_pos_col = cam1_df_positive.columns.values.tolist()[1:-1]
           option2 = st.selectbox('Choose Y Axis', cam1_pos_col)
-          ul2 = int(st.number_input('Upper Limit'))
-          ll2 = int(st.number_input('Lower Limit'))
+          ul2 = int(st.number_input('Upper Limit 2'))
+          ll2 = int(st.number_input('Lower Limit 2'))
           
           #Scatter Plots Positive
           st.write('This is cam 1 positive scatter plots')
