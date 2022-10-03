@@ -80,6 +80,8 @@ else:
           #Scatter Plot Selection Negative
           cam1_neg_col = cam1_df_negative.columns.values.tolist()[1:-1]
           option1 = st.selectbox('Choose Y Axis', cam1_neg_col)
+          ul1 = int(st.number_input('Upper Limit'))
+          ll1 = int(st.number_input('Lower Limit'))
           
           #Scatter Plots Negative
           st.write('This is cam 1 negative scatter plots')
@@ -89,12 +91,16 @@ else:
           st.write(option1)
           y1 = cam1_df_negative[option1]
           
-          plot = px.scatter(cam1_df_negative, x=x1, y=y1)
+          plot1 = px.scatter(cam1_df_negative, x=x1, y=y1)
+          plot1.add_hline(y=ul1)
+          plot1.add_hline(y=ll1)
           st.plotly_chart(plot, use_container_width=True)
           
           #Scatter Plot Selection Positive
           cam1_pos_col = cam1_df_positive.columns.values.tolist()[1:-1]
           option2 = st.selectbox('Choose Y Axis', cam1_pos_col)
+          ul2 = int(st.number_input('Upper Limit'))
+          ll2 = int(st.number_input('Lower Limit'))
           
           #Scatter Plots Positive
           st.write('This is cam 1 positive scatter plots')
@@ -104,8 +110,10 @@ else:
           st.write(option2)
           y2 = cam1_df_positive[option2]
           
-          plot = px.scatter(cam1_df_positive, x=x2, y=y2)
-          st.plotly_chart(plot, use_container_width=True)
+          plot2 = px.scatter(cam1_df_positive, x=x2, y=y2)
+          plot2.add_hline(y=ul2)
+          plot2.add_hline(y=ll2)
+          st.plotly_chart(plot2, use_container_width=True)
           
      elif cam2_selected == True:
           #Import Cam 2 Data
@@ -135,6 +143,8 @@ else:
           #Scatter Plot Selection Negative
           cam2_neg_col = cam2_df_negative.columns.values.tolist()[1:-1]
           option3 = st.selectbox('Choose Y Axis', cam2_neg_col)
+          ul3 = int(st.number_input('Upper Limit'))
+          ll3 = int(st.number_input('Lower Limit'))
           
           #Scatter Plots Negative
           st.write('This is cam 2 negative scatter plots')
@@ -144,12 +154,16 @@ else:
           st.write(option3)
           y3 = cam2_df_negative[option3]
           
-          plot = px.scatter(cam2_df_negative, x=x3, y=y3)
-          st.plotly_chart(plot, use_container_width=True)
+          plot3 = px.scatter(cam2_df_negative, x=x3, y=y3)
+          plot3.add_hline(y=ul3)
+          plot3.add_hline(y=ll3)
+          st.plotly_chart(plot3, use_container_width=True)
           
           #Scatter Plot Selection Positive
           cam2_pos_col = cam2_df_positive.columns.values.tolist()[1:-1]
           option4 = st.selectbox('Choose Y Axis', cam2_pos_col)
+          ul4 = int(st.number_input('Upper Limit'))
+          ll4 = int(st.number_input('Lower Limit'))
           
           #Scatter Plots Positive
           st.write('This is cam 2 positive scatter plots')
@@ -159,8 +173,10 @@ else:
           st.write(option4)
           y4 = cam2_df_positive[option4]
           
-          plot = px.scatter(cam2_df_positive, x=x4, y=y4)
-          st.plotly_chart(plot, use_container_width=True)
+          plot4 = px.scatter(cam2_df_positive, x=x4, y=y4)
+          plot4.add_hline(y=ul4)
+          plot4.add_hline(y=ll4)
+          st.plotly_chart(plot4, use_container_width=True)
 
 
 
