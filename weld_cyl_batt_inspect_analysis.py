@@ -61,11 +61,11 @@ else:
           cam1_df = cam1_df.sort_values(by=['Count'] , ascending=True)
 
           cam1_df_negative = cam1_df.loc[((cam1_df['Count'] % 10) < 6) & ((cam1_df['Count'] % 10) > 0)]
-          cam1_df_negative = cam1_df_negative.drop(cam1_df_negative.iloc[:, 1:43],axis = 1)
-          cam1_df_negative = cam1_df_negative.drop(cam1_df_negative.iloc[:,55:],axis = 1)
+          cam1_df_negative = cam1_df_negative.drop(cam1_df_negative.iloc[:, 1:57],axis = 1)
+          cam1_df_negative = cam1_df_negative.drop(cam1_df_negative.iloc[:,70:],axis = 1)
 
           cam1_df_positive = cam1_df.loc[((cam1_df['Count'] % 10) > 5) | ((cam1_df['Count'] % 10) == 0)]
-          cam1_df_positive = cam1_df_positive.drop(cam1_df_positive.iloc[:, 43:],axis = 1)
+          cam1_df_positive = cam1_df_positive.drop(cam1_df_positive.iloc[:, 57:],axis = 1)
 
           #Add Battery No
           cam1_df_negative['Battery No.'] = np.resize(samples_array, cam1_df_negative.shape[0])
@@ -116,11 +116,11 @@ else:
           cam2_df = cam2_df.sort_values(by=['Count'] , ascending=True)
 
           cam2_df_negative = cam2_df.loc[((cam2_df['Count'] % 10) < 6) & ((cam2_df['Count'] % 10) > 0)]
-          cam2_df_negative = cam2_df_negative.drop(cam2_df_negative.iloc[:, 1:139],axis = 1)
+          cam2_df_negative = cam2_df_negative.drop(cam2_df_negative.iloc[:, 1:183],axis = 1)
 
           cam2_df_positive = cam2_df.loc[((cam2_df['Count'] % 10) > 5) | ((cam2_df['Count'] % 10) == 0)]
-          cam2_df_positive = cam2_df_positive.drop(cam2_df_positive.iloc[:, 1:97],axis = 1)
-          cam2_df_positive = cam2_df_positive.drop(cam2_df_positive.iloc[:, 43:],axis = 1)
+          cam2_df_positive = cam2_df_positive.drop(cam2_df_positive.iloc[:, 1:127],axis = 1)
+          cam2_df_positive = cam2_df_positive.drop(cam2_df_positive.iloc[:, 56:],axis = 1)
 
           #Add Battery No.
           cam2_df_negative['Battery No.'] = np.resize(samples_array, cam2_df_negative.shape[0])
