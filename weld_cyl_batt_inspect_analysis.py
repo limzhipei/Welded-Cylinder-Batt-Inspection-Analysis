@@ -92,8 +92,8 @@ else:
           y1 = cam1_df_negative[option1]
           
           plot1 = px.scatter(cam1_df_negative, x=x1, y=y1)
-          plot1.add_hline(y=ul1)
-          plot1.add_hline(y=ll1)
+          plot1.add_hline(y=ul1, line_width=3, line_color="red")
+          plot1.add_hline(y=ll1, line_width=3, line_color="yellow")
           st.plotly_chart(plot1, use_container_width=True)
           
           #Scatter Plot Selection Positive
