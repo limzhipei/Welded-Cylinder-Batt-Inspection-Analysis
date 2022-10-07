@@ -101,7 +101,6 @@ else:
                x1 = cam1_df_negative['Battery No.']
 
                #Display Plot
-               st.write(option1)
                y1 = cam1_df_negative[option1]
 
                plot1 = px.scatter(cam1_df_negative, x=x1, y=y1)
@@ -121,7 +120,6 @@ else:
                x2 = cam1_df_positive['Battery No.']
 
                #Display Plot
-               st.write(option2)
                y2 = cam1_df_positive[option2]
 
                plot2 = px.scatter(cam1_df_positive, x=x2, y=y2)
@@ -166,7 +164,6 @@ else:
                x3 = cam2_df_negative['Battery No.']
 
                #Display Plot
-               st.write(option3)
                y3 = cam2_df_negative[option3]
 
                plot3 = px.scatter(cam2_df_negative, x=x3, y=y3)
@@ -186,7 +183,6 @@ else:
                x4 = cam2_df_positive['Battery No.']
 
                #Display Plot
-               st.write(option4)
                y4 = cam2_df_positive[option4]
 
                plot4 = px.scatter(cam2_df_positive, x=x4, y=y4)
@@ -233,7 +229,6 @@ else:
                x1 = cam1_df_negative['Battery No.']
 
                #Display Plot
-               st.write(option1)
                y1 = cam1_df_negative[option1]
 
                plot1 = px.scatter(cam1_df_negative, x=x1, y=y1)
@@ -253,7 +248,6 @@ else:
                x2 = cam1_df_positive['Battery No.']
 
                #Display Plot
-               st.write(option2)
                y2 = cam1_df_positive[option2]
 
                plot2 = px.scatter(cam1_df_positive, x=x2, y=y2)
@@ -298,7 +292,6 @@ else:
                x3 = cam2_df_negative['Battery No.']
 
                #Display Plot
-               st.write(option3)
                y3 = cam2_df_negative[option3]
 
                plot3 = px.scatter(cam2_df_negative, x=x3, y=y3)
@@ -318,7 +311,6 @@ else:
                x4 = cam2_df_positive['Battery No.']
 
                #Display Plot
-               st.write(option4)
                y4 = cam2_df_positive[option4]
 
                plot4 = px.scatter(cam2_df_positive, x=x4, y=y4)
