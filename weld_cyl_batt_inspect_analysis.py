@@ -50,6 +50,7 @@ samples_array = np.arange(1, samples+1)
 
 if (samples == 0 or selector is None or uploaded_file is None):
      st.header('Please input number of samples, select camera and upload a file to start!')
+     st.write('Battery number must be consecutive in the test run.')
 
 else:
      if cam1_selected == True:
