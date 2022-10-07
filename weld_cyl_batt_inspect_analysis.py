@@ -60,7 +60,7 @@ samples_array = np.arange(1, samples+1)
 if (samples == 0 or selector is None or uploaded_file is None):
      with st.container():
           st.subheader('Please input number of samples, select camera, select model and upload a file to start!')
-          st.info('Battery number must be consecutive in the test run.', icon='i')
+          st.info('Battery number must be consecutive in the test run.', icon="i")
 
 else:
      #23N Selected
