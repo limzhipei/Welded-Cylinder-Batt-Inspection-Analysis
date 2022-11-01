@@ -112,7 +112,7 @@ else:
                     plot1.add_hrect(y0=ll1, y1=ul1, line_width=0, fillcolor="green", opacity=0.2)
                     st.plotly_chart(plot1, use_container_width=True)
                     
-               with col12:
+               with col2:
                     option2 = st.selectbox('Choose Y Axis', cam1_neg_col)
                     ul2 = int(st.number_input('Upper Limit 2'))
                     ll2 = int(st.number_input('Lower Limit 2'))
@@ -148,7 +148,7 @@ else:
                     plot3.add_hrect(y0=ll3, y1=ul3, line_width=0, fillcolor="green", opacity=0.2)
                     st.plotly_chart(plot3, use_container_width=True)
                     
-                with col4:
+               with col4:
                     option4 = st.selectbox('Choose Y Axis', cam1_neg_col)
                     ul4 = int(st.number_input('Upper Limit 4'))
                     ll4 = int(st.number_input('Lower Limit 4'))
@@ -469,7 +469,7 @@ else:
                     plot1.add_hrect(y0=ll1, y1=ul1, line_width=0, fillcolor="green", opacity=0.2)
                     st.plotly_chart(plot1, use_container_width=True)
                     
-               with col12:
+               with col2:
                     option2 = st.selectbox('Choose Y Axis', cam1_neg_col)
                     ul2 = int(st.number_input('Upper Limit 2'))
                     ll2 = int(st.number_input('Lower Limit 2'))
@@ -505,7 +505,7 @@ else:
                     plot3.add_hrect(y0=ll3, y1=ul3, line_width=0, fillcolor="green", opacity=0.2)
                     st.plotly_chart(plot3, use_container_width=True)
                     
-                with col4:
+               with col4:
                     option4 = st.selectbox('Choose Y Axis', cam1_neg_col)
                     ul4 = int(st.number_input('Upper Limit 4'))
                     ll4 = int(st.number_input('Lower Limit 4'))
